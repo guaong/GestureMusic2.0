@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="io.guaong.gesturemusic20.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/a_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <io.guaong.gesturemusic20.control.WaterWaveView
+            android:id="@+id/a_water_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#b04e64" />
+
+        <io.guaong.gesturemusic20.control.PlayCircleButton
+            android:background="#00ffffff"
+            android:id="@+id/a_play_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/a_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/a_play_btn"
+            android:gravity="center"
+            android:text="title"
+            android:textColor="#fff"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/a_artist_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/a_title_text"
+            android:gravity="center"
+            android:text="artist"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/a_artist_text">
+
+            <io.guaong.gesturemusic20.control.OneToThreeButtonGroup
+                android:id="@+id/a_btn_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00ffffff">
+
+                <io.guaong.gesturemusic20.control.MenuCircleButton
+                    android:id="@+id/a_menu_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <io.guaong.gesturemusic20.control.ListCircleButton
+                    android:id="@+id/a_list_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <io.guaong.gesturemusic20.control.OrderCircleButton
+                    android:id="@+id/a_order_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <io.guaong.gesturemusic20.control.TimingCircleButton
+                    android:id="@+id/a_timing_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </io.guaong.gesturemusic20.control.OneToThreeButtonGroup>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/a_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4aa9aa"
+        android:visibility="invisible">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/a_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"  />
+
+    </RelativeLayout>
+
+</RelativeLayout>
